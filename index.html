@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sea Battle</title>
+    <link rel="stylesheet" href="style/main.css" />
+</head>
+
+<body>
+    <div class="app">
+        <div class="app-header">
+            <h1 class="app-title">Морський бій</h1>
+        </div>
+        <div class="app-body">
+            <div data-side="player"></div>
+            <div class="app-menu">
+                <div class="app-actions" data-scene="preparation">
+                    <button class="app-action" data-computer="simple" disabled>
+                        Грати проти слабкого
+                    </button>
+                    <button class="app-action" data-computer="middle" disabled>
+                        Грати проти середнього
+                    </button>
+                    <button class="app-action" data-computer="hard" disabled>
+                        Грати проти сильного
+                    </button>
+                    <button class="app-action" data-type="random" disabled>
+                        Грати проти випадкового гравця
+                    </button>
+                    <button class="app-action" data-type="challenge" disabled>
+                        Викликати на бій
+                    </button>
+                    <button class="app-action" data-action="manually">
+                        Розставити кораблі вручну
+                    </button>
+                    <button class="app-action" data-action="randomize">
+                        Розставити кораблі випадкого
+                    </button>
+                </div>
+
+                <div class="app-actions hidden" data-scene="computer">
+                    <div class="battlefield-status">Ваш ход</div>
+                    <button class="app-action" data-action="randomize">Сдаться</button>
+                </div>
+            </div>
+            <div data-side="opponent"></div>
+        </div>
+    </div>
+    <script src="script/additional.js"></script>
+    <script src="script/Mouse.js"></script>
+
+    <script src="script/Application.js"></script>
+    <script src="script/Scene.js"></script>
+    <script src="script/scenes/PreparetionScene.js"></script>
+
+    <script src="script/Battlifield.js"></script>
+    <script src="script/BattlefieldView.js"></script>
+
+    <script src="script/Ship.js"></script>
+    <script src="script/ShipView.js"></script>
+
+    <script src="script/main.js"></script>
+</body>
+
+</html>
